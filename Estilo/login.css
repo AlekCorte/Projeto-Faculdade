@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+.voltar {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    font-size: 16px;
+    background: #00a6e7;
+    border: none;
+    border-radius: 6px;
+    width: 50px;
+    height: 25px;
+}
+
+body {
+    background-color: #110025;
+    max-height: 100vh;
+}
+
+h1 {
+    color: #00a6e7;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    background: #0d001b;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.container span:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, rgb(0, 145, 194));
+    animation: animar1 2s linear infinite;
+}
+
+@keyframes animar1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.container span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgb(0, 145, 194));
+    animation: animar2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.container span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, rgb(0, 145, 194), transparent);
+    animation: animar3 2s linear infinite;
+}
+
+@keyframes animar3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.container span:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgb(0, 145, 194));
+    animation: animar4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+.inputs, .form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form {
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.inputs {
+    gap: 7px;
+}
+
+.input {
+    padding: 5px;
+    min-width: 300px;
+    background-color: #0d001b;
+    border: none;
+    border-bottom: 1px solid #00a6e7;
+    color: white;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.botaoLogin {
+    min-width: 300px;
+    height: 43px;
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background: #00a6e7;
+}
+
+.botaoLogin:hover, .voltar:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 26px rgba(0, 222, 254, 0.36);
+}
