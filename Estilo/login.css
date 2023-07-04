@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     scroll-behavior: smooth;
 }
@@ -176,4 +178,10 @@ h1 {
 .botaoLogin:hover, .voltar:hover {
     cursor: pointer;
     box-shadow: 0px 8px 26px rgba(0, 222, 254, 0.36);
+}
+
+@media (max-width: 660px) {
+    .container {
+        width: 90%;
+    }
 }

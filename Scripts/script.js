@@ -27,4 +27,30 @@ botao.forEach(function(button) {
   });
 });
 
+//contador das ofertas especiais
+const dataTerminoOferta = new Date(2023, 6, 10, 23, 59, 59);
+
+function atualizarContador() {
+    const agora = new Date().getTime();
+    const diferenca = dataTerminoOferta - agora;
+
+    // Calcula o tempo restante em dias, horas, minutos e segundos
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+    // Formata a saída do contador
+    const contadorElement = document.getElementById('contador');
+    contadorElement.innerHTML = `OFERTA TERMINA EM: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+    // Verifica se a oferta já terminou, se sim, exibe uma mensagem
+    if (diferenca < 0) {
+        contadorElement.innerHTML = 'OFERTA ENCERRADA!';
+    }
+}
+
+// Chama a função para atualizar o contador a cada segundo
+setInterval(atualizarContador, 1000);
+
 
