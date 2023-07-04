@@ -19,7 +19,7 @@
                 <li><a href="#maisven" class="nav-menu-esq-item">Mais vendidos</a></li>
                 <li><a href="#lanc" class="nav-menu-esq-item">Lançamentos</a></li>
                 <li><a href="#ofer" class="nav-menu-esq-item">Ofertas</a></li>
-                <li><a href="" class="nav-menu-esq-item">Gratuitos</a></li>
+                <li><a href="#grat" class="nav-menu-esq-item">Gratuitos</a></li>
             </ul>
 
             <div class="nav-menu-dir">
@@ -32,18 +32,20 @@
     <main>
 
         <div class="inicio">
-            <div class="inicio-texto">
-                <h1 class="titulo">Aproveite os melhores jogos com os melhores preços.</h1>
-                <a href="./login.html" class="a"><input type="button" value="Iniciar Sessão" class="iniciarSessao"></a>
-            </div>
-            <div class="inicio-imagem">
-                <div class="gradiente"></div>
+            <div class="inicio-item">
+                <div class="inicio-texto">
+                    <h1 class="titulo">Aproveite os melhores jogos com os melhores preços.</h1>
+                    <a href="./login.html" class="botao-entrar"><input type="button" value="Iniciar Sessão" class="iniciarSessao"></a>
+                </div>
+                <div class="inicio-imagem">
+                    <div class="gradiente"></div>
+                </div>
             </div>
         </div>
 
         <div class="container" id="maisven">
 
-            <h1>Mais Vendidos</h1>
+            <h1 class="titulo-container">Mais Vendidos</h1>
 
             <div class="jogos-home">
                 <div class="jogo">
@@ -92,58 +94,62 @@
         </div>
 
         <div class="container" id="lanc">
-            <h1>Lançamentos</h1>
+            <h1 class="titulo-container">Lançamentos</h1>
 
             <div class="jogos-lancamento">
                 <iframe src="https://www.youtube.com/embed/jFtk_7tvAVc" frameborder="0" height="420px" width="620px"></iframe>
-                <div class="imagens-jogos-lancamento">
-                    <img src="./Imagens/diablo4-capa.jpg" alt="Capa Diablo 4" width="320px">
-                    <img src="./Imagens/Diablo4-game.jpg" alt="Gameplay Diablo 4" width="320px">
+                <div class="itens-jogos-lancamento">
+                    <div class="imagens-jogos-lancamento">
+                        <img src="./Imagens/diablo4-capa.jpg" alt="Capa Diablo 4" width="320px">
+                        <img src="./Imagens/Diablo4-game.jpg" alt="Gameplay Diablo 4" width="320px">                        
+                    </div>
                     <div class="comprar-jogos-lancamento">
                         <p>R$ 349,99</p>
                         <input class="botao-favoritar" type="button" value="Favoritar">
                         <input type="button" class="botao-comprar-jogos-lancamento" value="Comprar">
                     </div>
-                    
                 </div>
             </div>
 
             <div class="jogos-lancamento">
                 <iframe src="https://www.youtube.com/embed/1O6Qstncpnc" frameborder="0" height="420px" width="620px"></iframe>
-                <div class="imagens-jogos-lancamento">
-                    <img src="./Imagens/capa-HogwartsLegacy.jpeg" alt="Capa Hogwarts Legacy" width="320px">
-                    <img src="./Imagens/HogwartsLegacy-gameplay.png" alt="Gameplay Hogwarts Legacy" width="320px">
+                <div class="itens-jogos-lancamento">
+                    <div class="imagens-jogos-lancamento">
+                        <img src="./Imagens/capa-HogwartsLegacy.jpeg" alt="Capa Hogwarts Legacy" width="320px">
+                        <img src="./Imagens/HogwartsLegacy-gameplay.png" alt="Gameplay Hogwarts Legacy" width="320px">                        
+                    </div>
                     <div class="comprar-jogos-lancamento">
                         <p>R$ 249,49</p>
                         <input class="botao-favoritar" type="button" value="Favoritar">
                         <input type="button" class="botao-comprar-jogos-lancamento" value="Comprar">
                     </div>
-                    
                 </div>
+
             </div>
 
             <div class="jogos-lancamento">
                 <iframe src="https://www.youtube.com/embed/E69tKrfEQag" frameborder="0" height="420px" width="620px"></iframe>
-                <div class="imagens-jogos-lancamento">
-                    <img src="./Imagens/residentEvil4-capa.png" alt="Capa Resident Evil 4 Remake" width="320px">
-                    <img src="./Imagens/ResidentEvil4-gameplay.webp" alt="Gameplay Resident Evil 4 Remake" width="320px">
+                <div class="itens-jogos-lancamento">
+                    <div class="imagens-jogos-lancamento">
+                        <img src="./Imagens/residentEvil4-capa.png" alt="Capa Resident Evil 4 Remake" width="320px">
+                        <img src="./Imagens/ResidentEvil4-gameplay.webp" alt="Gameplay Resident Evil 4 Remake" width="320px">                    
+                    </div>
                     <div class="comprar-jogos-lancamento">
                         <p>R$ 329,90</p>
                         <input class="botao-favoritar" type="button" value="Favoritar">
                         <input type="button" class="botao-comprar-jogos-lancamento" value="Comprar">
                     </div>
-                    
                 </div>
             </div>
         </div>
 
         <div class="span-oferta">
-            <p>APROVEITE O MÊS DO JOGO COM OFERTAS ESPECIAIS</p>
+            <p>APROVEITE O EVENTO DO ANO COM OFERTAS ESPECIAIS</p>
         </div>
 
 
         <div class="container" id="ofer">
-            <h1>OFERTAS IMPERDÍVEIS</h1>
+            <h1 class="titulo-container">OFERTAS IMPERDÍVEIS</h1>
 
             <div class="promocoes">
                 <div class="jogo-promocoes">
@@ -210,13 +216,41 @@
                 </div>
             </div>
         </div>
+
+        <div class="container" id="grat">
+            <h1 class="titulo-container">Jogos Gratuitos</h1>
+                <div class="gratuitos">
+                    <div class="jogoGratis item" id="first">
+                        <img src="./Imagens/capa-fornite.jpg" alt="Capa fortnite">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-overwatch2.webp" alt="Capa overwatch 2">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-destiny2.jpg" alt="Capa Destiny 2">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-valorant.jpg" alt="Capa Valorant">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-lol.jpg" alt="Capa League of Legends">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-Apex.jpg" alt="Capa Apex Legends">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-brawhalla.png" alt="capa Brawhalla">
+                    </div>
+                    <div class="jogoGratis item">
+                        <img src="./Imagens/capa-WorldofWarships.jpg" alt="Capa World of Warships">
+                    </div>
+                </div>
+        </div>
     </main>
 
 
 
-    <footer>
-        <p>a</p>
-    </footer>
+   
 
     <script src="./Scripts/script.js"></script>
 </body>

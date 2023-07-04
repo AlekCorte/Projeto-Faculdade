@@ -21,7 +21,10 @@ function mudarCor(button) {
 
 // Adiciona o ouvinte de evento de clique a cada botão
 botao.forEach(function(button) {
+  button.style.color = 'rgb(180, 180, 0)'
   button.addEventListener('click', function() {
     mudarCor(button);
   });
 });
+
+
