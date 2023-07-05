@@ -258,7 +258,7 @@ p {
     }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 580px){
     .container-esq {
         flex-direction: column;
         gap: 0px;
