@@ -24,6 +24,7 @@
 body {
     background-color: #110025;
     height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -58,13 +59,20 @@ nav {
 .logo h1 span{
     color: #006fd6;
 }
+
+.nav-list {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .nav-menu-esq, .nav-menu-dir, ul {
     display: flex;
     align-items: center;
 }
 
 .nav-menu-esq {
-    width: 70%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +80,7 @@ nav {
 
 .nav-menu-esq-item {
     position: relative;
-    padding: 0 10px;
+    padding: 0 8px;
     letter-spacing: 0.6px;
 }
 .nav-menu-esq-item:after {
@@ -102,6 +110,19 @@ a, li {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #00a6e7;
+    margin: 8px;
 }
 
 main {
@@ -404,7 +425,9 @@ legend {
 }
 
 .gratuitos {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
@@ -472,11 +495,61 @@ h3:hover {
 
 @media (max-width: 1034px) {
     nav {
-        justify-content: space-around;
+        justify-content: space-between;
     }
-    .nav-menu-esq {
+    .nav-list {
         display: none;
+    }
+    .nav-list, .nav-menu-esq{
+        display: flex;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 30vh;
+        background: #110025;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 22px;
+        padding-top: 15px;
+        transform: translateX(100%);    
     }  
+
+    @keyframes navLinkFade {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+      }
+      
+      .mobile-menu.active .line2 {
+        opacity: 0;
+      }
+      
+      .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+      }
+      
+
+    .nav-menu-esq-item {
+        letter-spacing: 2px;
+    }
+    .nav-menu-dir {
+        width: 100%;
+        margin-left: 3%;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-menu {
+        display: block;
+    }
     .inicio {
         background-image: url(../Imagens/fundo-responsivo.jpg);
         display: flex;
@@ -524,6 +597,10 @@ h3:hover {
     } 
 }
 
+.nav-list.active {
+    transform: translate(0);
+}
+
 @media (max-width: 1000px) {
     .titulo {
         font-size: 50px;
@@ -533,7 +610,7 @@ h3:hover {
         height: 100%;
     }
     .jogos-lancamento iframe {
-        height: 70vh;
+        height: 500px;
         width: 100%;
     }
     .itens-jogos-lancamento {
@@ -557,6 +634,9 @@ h3:hover {
 }
 
 @media (max-width: 820px) {
+    .nav-menu-dir {
+        margin-left: 4%;
+    }
     .titulo {
         font-size: 40px;
     }
@@ -572,10 +652,13 @@ h3:hover {
         width: 100%;
     }
     .comprar-jogos-lancamento {
+        justify-content: space-evenly;
+        width: 100%;
         flex-direction: row;
     }
     .comprar-jogos-lancamento p {
-        font-size: 15px;
+        padding: 3px;
+        font-size: 20px;
     }
     footer, .footer {
         height: 100%;
@@ -589,6 +672,9 @@ h3:hover {
 }
 
 @media (max-width: 650px) {
+    .nav-menu-dir{
+        margin-left: 6%;
+    }
     .jogo {
         width: 250px;
     }
@@ -609,6 +695,32 @@ h3:hover {
     }
     .legenda-jogo-mais-vendido p {
         font-size: 5px;
+    }
+}
+
+@media (max-width: 511px) {
+    .jogo-promocoes {
+        width: 800%;
+        height: 270px;
+    }
+    .jogo-promocoes img {
+        height: 220px;
+    }
+    .legenda-jogo-promocoes {
+        padding-top: 8px;
+    }
+    .gratuitos {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .jogoGratis {
+        height: 80%;
+        width: 40%;
+    }
+    .jogoGratis img {
+        height: 100%;
+        width: 100%;
     }
 }
 
