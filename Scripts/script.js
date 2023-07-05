@@ -90,11 +90,11 @@ function atualizarContador() {
 
     // Formata a saída do contador
     const contadorElement = document.getElementById('contador');
-    contadorElement.innerHTML = `OFERTA TERMINA EM: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    contadorElement.innerHTML = `TERMINA EM: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
 
     // Verifica se a oferta já terminou, se sim, exibe uma mensagem
     if (diferenca < 0) {
-        contadorElement.innerHTML = 'OFERTA ENCERRADA!';
+        contadorElement.innerHTML = 'ENCERRADO!';
     }
 }
 
